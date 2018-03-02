@@ -22,12 +22,12 @@ kakaoService.IsTest = testValue.IsTest
 '''
 
 try:
-    print("=" * 15 + " 알림톡/친구톡 전송취소 " + "=" * 15)
+    print("=" * 15 + " 알림톡/친구톡 예약전송취소 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 예약문자전송 접수번호
+    # 예약 알림톡/친구톡 전송 접수번호
     receiptNum = "018030210070700001"
 
     result = kakaoService.cancelReserve(CorpNum, receiptNum)
