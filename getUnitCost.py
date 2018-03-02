@@ -26,7 +26,7 @@ try:
     # 팝빌회원 아이디
     CorpNum = testValue.testCorpNum
 
-    # 전송유형 [ATS(알림톡), FTS(친구톡 텍스트), FMS(친구톡 이미지) ]
+    # 전송유형 [ ATS(알림톡), FTS(친구톡 텍스트), FMS(친구톡 이미지) ]
     MsgType = "ATS"
 
     unitCost = kakaoService.getUnitCost(CorpNum, MsgType)
