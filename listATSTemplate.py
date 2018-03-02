@@ -33,7 +33,7 @@ try:
 
     i = 1
     for info in response:
-        print("====== 알림톡 템플릿 목록 확인 [%d] ======" % i)
+        print("====== 알림톡 템플릿 [%d] ======" % i)
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1

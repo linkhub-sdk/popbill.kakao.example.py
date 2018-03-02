@@ -15,7 +15,7 @@ kakaoService.IsTest = testValue.IsTest
 
 '''
 파트너 포인트 충전 URL을 반환합니다.
-- 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
+ - 보안정책에 따라 반환된 URL은 30초의 유효시간을 갖습니다.
 '''
 
 try:

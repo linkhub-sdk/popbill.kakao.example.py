@@ -31,16 +31,16 @@ try:
     # 종료일자, 날짜형식(yyyyMMdd)
     EDate = "20180228"
 
-    # 전송상태 배열, [0-대기, 1-전송중, 2-성공, 3-대체 4-실패, 5-취소]
+    # 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체 4-실패, 5-취소]
     State = ["1", "2", "3", "4", "5"]
 
-    # 전송유형, [ATS(알림톡) / FTS(친구톡 텍스트) / FMS(친구톡 이미지)]
+    # 전송유형 [ATS(알림톡) / FTS(친구톡 텍스트) / FMS(친구톡 이미지)]
     Item = ["SMS", "LMS", "MMS"]
 
     # 예약전송 검색여부, [0-전체조회, 1-예약전송]
     ReserveYN = "0"
 
-    # 개인조회여부, [0-전체조회, 1-개인조회]
+    # 개인조회여부 [0-전체조회, 1-개인조회]
     SenderYN = "0"
 
     # 페이지 번호
@@ -49,7 +49,7 @@ try:
     # 페이지당 목록개수
     PerPage = 10
 
-    # 정렬방향, [D-내림차순, A-오름차순]
+    # 정렬방향 [D-내림차순, A-오름차순]
     Order = "D"
 
     response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order, UserID)

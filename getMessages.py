@@ -26,7 +26,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 문자전송 요청시 반환받은 접수번호
+    # 알림톡/친구톡 전송 요청시 반환받은 접수번호
     receiptNum = "018022815501800001"
 
     response = kakaoService.getMessages(CorpNum, receiptNum)
