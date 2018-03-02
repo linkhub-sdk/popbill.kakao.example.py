@@ -42,6 +42,7 @@ try:
     sndDT = ""
 
     # 파일경로
+    # 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbte / 이미지 가로&세로 비율 : 1.5 미만)
     filePath = "test.jpg"
 
     # 이미지 링크 URL
