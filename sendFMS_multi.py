@@ -33,7 +33,7 @@ try:
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "01083490706"
+    snd = "010111222"
 
     # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     altSendType = "A"
@@ -44,7 +44,7 @@ try:
     # 파일경로
     filePath = "test.jpg"
 
-    # 파일경로 URL
+    # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
     KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능

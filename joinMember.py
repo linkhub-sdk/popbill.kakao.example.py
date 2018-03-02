@@ -27,10 +27,10 @@ try:
     # 회원정보
     newMember = JoinForm(
 
-        # 회원아이디, 최대 20자
+        # 회원아이디
         ID="testkorea_kakao",
 
-        # 비밀번호, 최대 20자
+        # 비밀번호
         PWD="this_is_password",
 
         # 사업자번호

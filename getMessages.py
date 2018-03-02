@@ -39,12 +39,14 @@ try:
     print("altSendType (대체문자 유형): %s " % response.sndDT)
     print("reserveDT (예약일시): %s " % response.reserveDT)
     print("adsYN (광고여부): %s " % response.adsYN)
+    print("imageURL (친구톡 이미지 URL): %s " % response.imageURL)
+    print("sendCnt (전송건수): %s " % response.sendCnt)
     print("successCnt (성공건수): %s " % response.successCnt)
     print("failCnt (실패건수): %s " % response.failCnt)
     print("altCnt (대체문자 건수): %s " % response.altCnt)
     print("cancelCnt (취소건수): %s " % response.cancelCnt)
     print("adsYN (광고전송 여부): %s " % response.adsYN)
-    print()
+    print
 
     i = 1
     for info in response.msgs:
@@ -52,7 +54,7 @@ try:
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
-        print()
+        print
 
     i = 1
     for info in response.btns:
@@ -60,7 +62,7 @@ try:
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
-        print()
+        print
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

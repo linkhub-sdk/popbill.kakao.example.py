@@ -17,11 +17,11 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-팝빌에 등록된 문자 발신번호 목록을 확인합니다.
+팝빌에 등록된 발신번호 목록을 확인합니다.
 '''
 
 try:
-    print("=" * 15 + " 문자 발신번호 목록 확인 " + "=" * 15)
+    print("=" * 15 + " 발신번호 목록 확인 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum

@@ -33,7 +33,7 @@ try:
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "01083490706"
+    snd = "010111222"
 
     # [동보] 친구톡 내용 (최대 1000자)
     content = "안녕하세요 팝빌 플친님 파이썬입니다."
@@ -50,7 +50,7 @@ try:
     # 파일경로
     filePath = "test.jpg"
 
-    # 파일경로 URL
+    # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
     KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능

@@ -37,7 +37,7 @@ try:
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
-        print("")
+        print
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
