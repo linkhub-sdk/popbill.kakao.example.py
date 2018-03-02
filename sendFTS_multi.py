@@ -16,6 +16,10 @@ from popbill import KakaoService, PopbillException, KakaoButton, KakaoReceiver
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
+'''
+개별 내용의 친구톡 텍스트를 대량 전송 합니다.
+'''
+
 try:
     print("=" * 15 + " 친구톡 텍스트 대량 전송 " + "=" * 15)
 
@@ -31,35 +35,30 @@ try:
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
     snd = "01083490706"
 
-    # [동보] 친구톡 내용 (최대 1000자)
-    content = "친구톡 내용"
-
-    # [동보] 대체문자 내용 (최대 2000byte)
-    altContent = "대체문자 내용"
-
     # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     altSendType = "A"
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = []
-
-    for x in range(0, 2):
+    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
+    for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="01098761234",
-                rcvnm="kimhyunjin",
-                msg="친구톡 우선순위 내용",
-                altmsg="대체문자 우선순위 내용"
+                rcv="0101234567",
+                rcvnm="김현진",
+                msg="안녕하세요 김현진님 링크허브입니다.",
+                altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다."
             )
         )
 
-    for x in range(0, 2):
+    for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="01045677890",
+                rcv="0102345678",
                 rcvnm="kimhyunjin",
+                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",
+                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."
             )
         )
 
@@ -85,7 +84,7 @@ try:
     # 광고여부
     adsYN = False
 
-    receiptNum = kakaoService.sendFTS_multi(CorpNum, plusFriendID, snd, content, altContent, altSendType,
+    receiptNum = kakaoService.sendFTS_multi(CorpNum, plusFriendID, snd, "", "", altSendType,
                                             sndDT, KakaoMessages, KakaoButtons, adsYN, UserID)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 

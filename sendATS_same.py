@@ -39,7 +39,7 @@ try:
     content = "[테스트] 테스트 템플릿입니다."
 
     # [동보] 대체문자 내용 (최대 2000byte)
-    altContent = "알림톡 대체 문자"
+    altContent = "[테스트] 알림톡 대체 문자"
 
     # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     altSendType = "A"
@@ -47,7 +47,7 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = []
+    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(

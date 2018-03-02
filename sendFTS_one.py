@@ -16,6 +16,10 @@ from popbill import KakaoService, PopbillException, KakaoButton
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
+'''
+단건의 친구톡 텍스트를 전송합니다.
+'''
+
 try:
     print("=" * 15 + " 친구톡 텍스트 단건 전송 " + "=" * 15)
 

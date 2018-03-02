@@ -41,7 +41,7 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = []
+    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 2):
         KakaoMessages.append(
             KakaoReceiver(
@@ -61,7 +61,6 @@ try:
                 altmsg="수신번호 010-123-321 알림톡 대체문자"  # 대체문자 내용 (최대 2000byte)
             )
         )
-
 
     receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, "", "",
                                             altSendType, sndDT, KakaoMessages, UserID)
