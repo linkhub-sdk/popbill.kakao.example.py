@@ -16,6 +16,10 @@ from popbill import KakaoService, PopbillException, KakaoReceiver
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
+'''
+개별 내용의 알림톡을 대량 전송 합니다.
+'''
+
 try:
     print("=" * 15 + " 알림톡 대량 전송 " + "=" * 15)
 
@@ -31,14 +35,8 @@ try:
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
     snd = "01083490706"
 
-    # [동보] 알림톡 내용 (최대 1000자)
-    content = "[테스트] 테스트 템플릿입니다."
-
-    # [동보] 대체문자 내용 (최대 2000byte)
-    altContent = "알림톡 대체 문자"
-
-    # 대체문자 유형 [공백-미전송, C-알림톡태용, A-대체문자내용]
-    altSendType = ""
+    # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
+    altSendType = "A"
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
@@ -47,22 +45,25 @@ try:
     for x in range(0, 2):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="01083490706",  # 수신번호
+                rcv="010456456",  # 수신번호
                 rcvnm="linkhub",  # 수신자 이름
                 msg="[테스트] 테스트 템플릿입니다.",  # 알림톡 내용 (최대 1000자)
-                altmsg="알림톡 우선순위 대체문자"  # 대체문자 내용 (최대 2000byte)
+                altmsg="수신번호 010-456-456 알림톡 대체문자"  # 대체문자 내용 (최대 2000byte)
             )
         )
 
     for x in range(0, 2):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="01087654321",  # 수신번호
-                rcvnm="popbill"  # 수신자 이름
+                rcv="010123321",  # 수신번호
+                rcvnm="linkhub",  # 수신자 이름
+                msg="[테스트] 테스트 템플릿입니다.",  # 알림톡 내용 (최대 1000자)
+                altmsg="수신번호 010-123-321 알림톡 대체문자"  # 대체문자 내용 (최대 2000byte)
             )
         )
 
-    receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, content, altContent,
+
+    receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, "", "",
                                             altSendType, sndDT, KakaoMessages, UserID)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
