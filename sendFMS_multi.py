@@ -52,20 +52,20 @@ try:
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0101234567",
-                rcvnm="김현진",
-                msg="안녕하세요 김현진님 링크허브입니다.",
-                altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다."
+                rcv="0101234567",   #수신번호
+                rcvnm="김현진",    #수신자 이름
+                msg="안녕하세요 김현진님 링크허브입니다.",  #친구톡 내용 (최대 400자)
+                altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다." #대체문자 내용 (최대 2000byte)
             )
         )
 
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0102345678",
-                rcvnm="kimhyunjin",
-                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",
-                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."
+                rcv="0102345678",   #수신번호
+                rcvnm="kimhyunjin", #수신자 이름
+                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",   #친구톡 내용 (최대 400자)
+                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."  #대체문자 내용 (최대 2000byte)
             )
         )
 
