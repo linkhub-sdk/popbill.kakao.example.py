@@ -23,7 +23,7 @@ kakaoService.IsTest = testValue.IsTest
 try:
     print("=" * 15 + " 알림톡/친구톡 전송단가 확인 " + "=" * 15)
 
-    # 팝빌회원 아이디
+    # 팝빌회원 아이디("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 전송유형 [ATS(알림톡), FTS(친구톡 텍스트), FMS(친구톡 이미지)]

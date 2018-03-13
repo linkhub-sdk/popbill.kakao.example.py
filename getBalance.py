@@ -24,7 +24,7 @@ kakaoService.IsTest = testValue.IsTest
 try:
     print("=" * 15 + " 연동회원 잔여포인트 확인 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
     balance = kakaoService.getBalance(CorpNum)

@@ -23,7 +23,7 @@ kakaoService.IsTest = testValue.IsTest
 try:
     print("=" * 15 + " 친구톡 텍스트 단건 전송 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 팝빌회원 아이디

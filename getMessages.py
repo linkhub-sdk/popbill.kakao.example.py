@@ -23,7 +23,7 @@ kakaoService.IsTest = testValue.IsTest
 try:
     print("=" * 15 + " 알림톡/친구톡 전송결과 확인 " + "=" * 15)
 
-    # 팝빌회원 사업자번호
+    # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
     # 알림톡/친구톡 전송 요청시 반환받은 접수번호
