@@ -30,6 +30,7 @@ try:
     UserID = testValue.testUserID
 
     # 알림톡 템플릿 코드
+    # 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetURL(TEMPLATE) API, 혹은 팝빌사이트에서 확인이 가능합니다.
     templateCode = "018020000001"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)

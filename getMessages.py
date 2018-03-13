@@ -49,16 +49,16 @@ try:
     print
 
     i = 1
-    for info in response.msgs:
-        print("====== 전송결과 정보 배열 [%d] ======" % i)
+    for info in response.btns:
+        print("====== 버튼 [%d] ======" % i)
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
         print
 
     i = 1
-    for info in response.btns:
-        print("====== 버튼 [%d] ======" % i)
+    for info in response.msgs:
+        print("====== 전송결과 정보 배열 [%d] ======" % i)
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1

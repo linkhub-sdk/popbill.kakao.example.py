@@ -31,11 +31,19 @@ try:
 
     response = kakaoService.listATSTemplate(CorpNum, UserID)
 
-    i = 1
+    i = 0
     for info in response:
         print("====== 알림톡 템플릿 [%d] ======" % i)
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
+            if (key == "btns"):
+                for btns in response[i].btns:
+                    print("===== 버톤 목록 =====")
+                    print("버튼명 : %s " % (btns.n))
+                    print("버튼유형 : %s " % (btns.t))
+                    print("버튼링크1 : %s " % (btns.u1))
+                    print("버튼링크2 : %s " % (btns.u2))
+                print()
         i += 1
 
 except PopbillException as PE:
