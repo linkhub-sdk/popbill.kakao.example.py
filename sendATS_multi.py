@@ -47,13 +47,18 @@ try:
             KakaoReceiver(
                 rcv="010456456",  # 수신번호
                 rcvnm="linkhub",  # 수신자 이름
-                msg="[테스트] 테스트 템플릿입니다. " + x + "번째",  # 알림톡 내용 (최대 1000자)
+                msg="[테스트] 테스트 템플릿입니다" + str(x),  # 알림톡 내용 (최대 1000자)
                 altmsg="수신번호 010-456-456 알림톡 대체문자"  # 대체문자 내용 (최대 2000byte)
             )
         )
 
+    # 전송요청번호
+    # 파트너가 전송 건에 대해 관리번호를 구성하여 관리하는 경우 사용.
+    # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
+    requestNum = ""
+
     receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, "", "",
-                                            altSendType, sndDT, KakaoMessages, UserID)
+                                            altSendType, sndDT, KakaoMessages, UserID, requestNum)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 
