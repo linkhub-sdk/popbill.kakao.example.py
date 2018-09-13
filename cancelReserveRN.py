@@ -27,7 +27,7 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 예약전송 요청시 할당한 전송요청번호
+    # 예약전송 요청시 할당한 전송요청번호(requestNum)
     requestNum = "20180912104747"
 
     result = kakaoService.cancelReserveRN(CorpNum, requestNum)

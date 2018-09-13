@@ -26,7 +26,7 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 알림톡/친구톡 전송 요청시 반환받은 접수번호
+    # 알림톡/친구톡 전송 요청시 할당한 전송요청번호(requestNum)
     requestNum = "20180809151234"
 
     response = kakaoService.getMessagesRN(CorpNum, requestNum)
