@@ -46,7 +46,8 @@ try:
     print("altCnt (대체문자 건수): %s " % response.altCnt)
     print("cancelCnt (취소건수): %s " % response.cancelCnt)
     print("adsYN (광고전송 여부): %s " % response.adsYN)
-    print
+    print("receiptNum (접수번호) : %s" % response.receiptNum)
+    print("requestNum (요청번호) : %s" % response.requestNum)
 
     i = 1
     for info in response.btns:

@@ -25,11 +25,12 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
+    # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20180227"
+    SDate = "20180920"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20180228"
+    EDate = "20181010"
 
     # 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체 4-실패, 5-취소]
     State = ["0", "1", "2", "3", "4", "5"]
@@ -60,7 +61,7 @@ try:
     print("perPage (페이지당 검색개수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s " % response.pageCount)
-    print()
+
 
     i = 1
     for info in response.list:
@@ -68,7 +69,7 @@ try:
         for key, value in info.__dict__.items():
             print("%s : %s" % (key, value))
         i += 1
-        print()
+
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
