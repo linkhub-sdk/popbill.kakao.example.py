@@ -22,7 +22,7 @@ kakaoService.IsTest = testValue.IsTest
 '''
 
 try:
-    print("=" * 15 + " 팝빌 로그인 팝업 URL 확인 " + "=" * 15)
+    print("=" * 15 + " 플러스친구 계정관리 팝업 URL 확인 " + "=" * 15)
 
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
