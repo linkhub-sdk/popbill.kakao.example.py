@@ -17,7 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인한다.
+전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인합니다.
 '''
 
 try:
@@ -27,7 +27,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 알림톡/친구톡 전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20180809151234"
+    requestNum = "20190118-001"
 
     response = kakaoService.getMessagesRN(CorpNum, requestNum)
 

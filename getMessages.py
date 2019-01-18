@@ -17,7 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-알림톡/친구톡에 대한 전송내역을 확인 합니다.
+알림톡/친구톡 요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다.
 '''
 
 try:

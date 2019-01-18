@@ -33,7 +33,7 @@ try:
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "010111222"
+    snd = "07043042992"
 
     # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     altSendType = "A"
@@ -48,27 +48,26 @@ try:
     # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
-    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
+    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0101234567",   #수신번호
-                rcvnm="김현진",    #수신자 이름
-                msg="안녕하세요 김현진님 링크허브입니다.",  #친구톡 내용 (최대 400자)
-                altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다." #대체문자 내용 (최대 2000byte)
+                rcv="0101234567",  # 수신번호
+                rcvnm="김현진",  # 수신자 이름
+                msg="안녕하세요 김현진님 링크허브입니다.",  # 친구톡 내용 (최대 400자)
+                altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
             )
         )
 
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0102345678",   #수신번호
-                rcvnm="kimhyunjin", #수신자 이름
-                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",   #친구톡 내용 (최대 400자)
-                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."  #대체문자 내용 (최대 2000byte)
+                rcv="0102345678",  # 수신번호
+                rcvnm="kimhyunjin",  # 수신자 이름
+                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",  # 친구톡 내용 (최대 400자)
+                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
             )
         )
-
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []

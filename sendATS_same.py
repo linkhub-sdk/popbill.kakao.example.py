@@ -48,7 +48,7 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
+    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(

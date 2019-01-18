@@ -47,12 +47,12 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
+    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 2):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0101235678",   #수신번호
-                rcvnm="팝친"  #수신자 이름
+                rcv="0101235678",  # 수신번호
+                rcvnm="팝친"  # 수신자 이름
             )
         )
 

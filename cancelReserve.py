@@ -17,8 +17,8 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-알림톡/친구톡 예약전송을 취소합니다.
- - 예약취소는 예약전송시간 10분전까지만 가능합니다.
+알림톡/친구톡 전송요청시 발급받은 접수번호(receiptNum)로 예약전송건을 취소합니다.
+- 예약취소는 예약전송시간 10분전까지만 가능합니다.
 '''
 
 try:

@@ -27,10 +27,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20180920"
+    SDate = "20190101"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20181010"
+    EDate = "20190118"
 
     # 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체 4-실패, 5-취소]
     State = ["0", "1", "2", "3", "4", "5"]
@@ -53,7 +53,8 @@ try:
     # 정렬방향 [D-내림차순, A-오름차순]
     Order = "D"
 
-    response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order, UserID)
+    response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order,
+                                   UserID)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
@@ -61,7 +62,6 @@ try:
     print("perPage (페이지당 검색개수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s " % response.pageCount)
-
 
     i = 1
     for info in response.list:

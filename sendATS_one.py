@@ -31,13 +31,13 @@ try:
 
     # 알림톡 템플릿코드
     # 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 혹은 팝빌사이트에서 확인이 가능합니다.
-    templateCode = "018020000002"
+    templateCode = "018110000047"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "010111222"
+    snd = "07043042992"
 
     # 알림톡 내용 (최대 1000자)
-    content = "테스트 템플릿 입니다."
+    content = "테스트 템플릿입니다."
 
     # 대체문자 내용 (최대 2000byte)
     altContent = "알림톡 대체 문자"

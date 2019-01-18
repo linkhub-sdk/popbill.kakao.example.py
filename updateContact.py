@@ -31,23 +31,26 @@ try:
         # 담당자 아이디
         id=UserID,
 
-        # 담당자 성명
+        # 담당자 성명 (최대 100자)
         personName="담당자 성명",
 
-        # 연락처
+        # 연락처 (최대 20자)
         tel="070-4304-2991",
 
-        # 휴대폰번호
+        # 휴대폰번호 (최대 20자)
         hp="010-4324-4324",
 
-        # 팩스번호
+        # 팩스번호 (최대 20자)
         fax="070-111-222",
 
-        # 메일주소
+        # 메일주소 (최대 100자)
         email="dev@linkhub.co.kr",
 
-        # 회사조회 여부, True-회사조회, False-개인조회
-        searchAllAllowYN=True
+        # 회사조회 권한여부, True(회사조회) False(개인조회)
+        searchAllAllowYN=True,
+
+        # 관리자 권한여부, True(관리자), False(사용자)
+        mgrYN=True
     )
 
     result = kakaoService.updateContact(CorpNum, updateInfo, UserID)

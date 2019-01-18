@@ -33,10 +33,10 @@ try:
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "01083490706"
+    snd = "07043042992"
 
     # 친구톡 내용 (최대 1000자)
-    content = "친구톡 내용"
+    content = ""
 
     # 대체문자 내용 (최대 2000byte)
     altContent = "대체문자 내용"
@@ -55,22 +55,6 @@ try:
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []
-    for x in range(0, 1):
-        KakaoButtons.append(
-            KakaoButton(
-                n="팝빌 바로가기",  # 버튼명
-                t="WL",  # 버튼유형 [WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
-                u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
-                u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
-            )
-        )
-
-    KakaoButtons.append(
-        KakaoButton(
-            n="메시지전달",
-            t="MD",
-        )
-    )
 
     # 광고여부
     adsYN = False

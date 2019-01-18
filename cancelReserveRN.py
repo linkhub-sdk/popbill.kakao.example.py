@@ -18,7 +18,7 @@ kakaoService.IsTest = testValue.IsTest
 
 '''
 전송요청번호(requestNum)를 할당한 알림톡/친구톡 예약전송건을 취소합니다.
- - 예약취소는 예약전송시간 10분전까지만 가능합니다.
+- 예약전송 취소는 예약시간 10분전까지만 가능합니다.
 '''
 
 try:
@@ -28,7 +28,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 예약전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20180912104747"
+    requestNum = "20190117-001"
 
     result = kakaoService.cancelReserveRN(CorpNum, requestNum)
 

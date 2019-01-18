@@ -54,12 +54,12 @@ try:
     # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
-    KakaoMessages = [] # 1회 최대 전송 1,000건 전송 가능
+    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="0101235678",   #수신번호
-                rcvnm="팝친"  #수신자 이름
+                rcv="0101235678",  # 수신번호
+                rcvnm="팝친"  # 수신자 이름
             )
         )
 
