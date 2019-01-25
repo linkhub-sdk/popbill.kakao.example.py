@@ -17,7 +17,8 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-개별 내용의 알림톡을 대량 전송 합니다.
+[대량전송] 알림톡 전송을 요청합니다.
+- 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
 '''
 
 try:
@@ -46,7 +47,7 @@ try:
     for x in range(0, 2):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="010456456",  # 수신번호
+                rcv="010111222",  # 수신번호
                 rcvnm="linkhub",  # 수신자 이름
                 msg="[테스트] 테스트 템플릿입니다" + str(x),  # 알림톡 내용 (최대 1000자)
                 altmsg="수신번호 010-456-456 알림톡 대체문자"  # 대체문자 내용 (최대 2000byte)

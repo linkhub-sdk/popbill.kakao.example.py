@@ -70,6 +70,5 @@ try:
             print("%s : %s" % (key, value))
         i += 1
 
-
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

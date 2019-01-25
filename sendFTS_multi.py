@@ -17,7 +17,8 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-개별 내용의 친구톡 텍스트를 대량 전송 합니다.
+[대량전송] 친구톡(텍스트) 전송을 요청합니다.
+- 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
 '''
 
 try:
@@ -33,7 +34,7 @@ try:
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "010111222"
+    snd = "07043042992"
 
     # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
     altSendType = "A"
@@ -64,20 +65,20 @@ try:
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []
-    for x in range(0, 1):
-        KakaoButtons.append(
-            KakaoButton(
-                n="팝빌 바로가기",  # 버튼명
-                t="WL",  # [버튼유형 WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
-                u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
-                u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
-            )
-        )
 
     KakaoButtons.append(
         KakaoButton(
-            n="봇키워드",
-            t="BK",
+            n="팝빌 바로가기",  # 버튼명
+            t="WL",  # 버튼유형 [DS-배송조회, WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
+            u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
+            u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
+        )
+    )
+
+    KakaoButtons.append(
+        KakaoButton(
+            n="메시지전달",
+            t="MD",
         )
     )
 

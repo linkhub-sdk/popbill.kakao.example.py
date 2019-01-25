@@ -18,6 +18,7 @@ kakaoService.IsTest = testValue.IsTest
 
 '''
 단건의 알림톡을 전송합니다.
+- 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
 '''
 
 try:
@@ -37,6 +38,7 @@ try:
     snd = "07043042992"
 
     # 알림톡 내용 (최대 1000자)
+    # 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
     content = "테스트 템플릿입니다."
 
     # 대체문자 내용 (최대 2000byte)
@@ -49,7 +51,7 @@ try:
     sndDT = ""
 
     # 수신번호
-    receiver = "01012341234"
+    receiver = "010111222"
 
     # 수신자 이름
     receiverName = "partner"

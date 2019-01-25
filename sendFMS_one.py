@@ -17,7 +17,9 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-단건의 친구톡 이미지를 전송합니다.
+친구톡(이미지) 전송을 요청합니다.
+- 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
+- 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 이미지 높이/너비 비율 1.333 이하, 1/2 이상
 '''
 
 try:
@@ -62,15 +64,15 @@ try:
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []
-    for x in range(0, 2):
-        KakaoButtons.append(
-            KakaoButton(
-                n="팝빌 바로가기",  # 버튼명
-                t="WL",  # 버튼유형 [WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
-                u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
-                u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
-            )
+
+    KakaoButtons.append(
+        KakaoButton(
+            n="팝빌 바로가기",  # 버튼명
+            t="WL",  # 버튼유형 [DS-배송조회, WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
+            u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
+            u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
         )
+    )
 
     KakaoButtons.append(
         KakaoButton(

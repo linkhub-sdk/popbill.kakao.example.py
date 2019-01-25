@@ -43,7 +43,6 @@ try:
                     print("t (버튼유형) : %s " % (btns.t))
                     print("u1 (버튼링크1) : %s " % (btns.u1))
                     print("u2 (버튼링크2) : %s " % (btns.u2))
-                print()
         i += 1
 
 except PopbillException as PE:

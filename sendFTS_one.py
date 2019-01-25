@@ -17,7 +17,8 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-단건의 친구톡 텍스트를 전송합니다.
+친구톡(텍스트) 전송을 요청합니다.
+- 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
 '''
 
 try:
@@ -36,7 +37,7 @@ try:
     snd = "07043042992"
 
     # 친구톡 내용 (최대 1000자)
-    content = ""
+    content = "친구톡 내용 입니다."
 
     # 대체문자 내용 (최대 2000byte)
     altContent = "대체문자 내용"
@@ -55,6 +56,22 @@ try:
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []
+
+    KakaoButtons.append(
+        KakaoButton(
+            n="팝빌 바로가기",  # 버튼명
+            t="WL",  # 버튼유형 [DS-배송조회, WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
+            u1="http://www.popbill.com",  # [앱링크-Android, 웹링크-Mobile]
+            u2="http://www.popbill.com"  # [앱링크-IOS, 웹링크-PC URL]
+        )
+    )
+
+    KakaoButtons.append(
+        KakaoButton(
+            n="메시지전달",
+            t="MD",
+        )
+    )
 
     # 광고여부
     adsYN = False

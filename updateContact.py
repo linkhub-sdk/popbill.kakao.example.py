@@ -16,6 +16,10 @@ from popbill import KakaoService, PopbillException, ContactInfo
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
+'''
+연동회원의 담당자 정보를 수정합니다.
+'''
+
 try:
     print("=" * 15 + " 담당자 정보 수정 " + "=" * 15)
 

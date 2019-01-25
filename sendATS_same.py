@@ -17,11 +17,12 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 
 '''
-동일한 내용의 알림톡을 대량 전송 합니다.
+[동보전송] 알림톡 전송을 요청합니다.
+- 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
 '''
 
 try:
-    print("=" * 15 + " 알림톡 대량 전송 " + "=" * 15)
+    print("=" * 15 + " 알림톡 동보 전송 " + "=" * 15)
 
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
@@ -31,10 +32,10 @@ try:
 
     # 알림톡 템플릿 코드
     # 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 혹은 팝빌사이트에서 확인이 가능합니다.
-    templateCode = "018020000001"
+    templateCode = "018110000047"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "010111222"
+    snd = "07043042992"
 
     # [동보] 알림톡 내용 (최대 1000자)
     content = "[테스트] 테스트 템플릿입니다."
@@ -52,7 +53,7 @@ try:
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="010987123",  # 수신번호
+                rcv="010111222",  # 수신번호
                 rcvnm="popbill"  # 수신자 이름
             )
         )
