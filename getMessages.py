@@ -47,23 +47,31 @@ try:
     print("cancelCnt (취소건수): %s " % response.cancelCnt)
     print("adsYN (광고전송 여부): %s " % response.adsYN)
     print("receiptNum (접수번호) : %s" % response.receiptNum)
-    print("requestNum (요청번호) : %s" % response.requestNum)
+    print("requestNum (요청번호) : %s" % response.requestNum) +'\n'
 
-    i = 1
+    print("====== [배열] 버튼 목록 ======")
     for info in response.btns:
-        print("====== 버튼 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-        i += 1
-        print
+        print("n (버튼명) : %s" % info.n)
+        print("t (버튼유형) : %s" % info.t)
+        print("u1 (버튼링크1) : %s" % info.u1)
+        print("u2 (버튼링크2) : %s" % info.u2) +'\n'
 
-    i = 1
+    print("====== 전송결과 정보 배열 ======")
     for info in response.msgs:
-        print("====== 전송결과 정보 배열 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-        i += 1
-        print
+        print("state (전송상태 코드) : %s" % info.state)
+        print("sendDT (전송일시) : %s" % info.sendDT)
+        print("receiveNum (수신번호) : %s" % info.receiveNum)
+        print("receiveName (수신자명) : %s" % info.receiveName)
+        print("content (알림톡/친구톡 내용) : %s" % info.content)
+        print("result (알림톡/친구톡 전송결과 코드) : %s" % info.result)
+        print("resultDT (알림톡/친구톡 전송결과 수신일시) : %s" % info.resultDT)
+        print("altContent (대체문자 내용) : %s" % info.altContent)
+        print("altContentType (대체문자 전송유형) : %s" % info.altContentType)
+        print("altSendDT (대체문자 전송일시) : %s" % info.altSendDT)
+        print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)
+        print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
+        print("receiptNum (접수번호) : %s" % info.receiptNum)
+        print("requestNum (요청번호) : %s" % info.requestNum) +'\n'
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

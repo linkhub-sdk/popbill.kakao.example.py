@@ -31,19 +31,19 @@ try:
 
     response = kakaoService.listATSTemplate(CorpNum, UserID)
 
-    i = 0
     for info in response:
-        print("====== 알림톡 템플릿 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-            if (key == "btns"):
-                for btns in response[i].btns:
-                    print("===== 버톤 목록 =====")
-                    print("n (버튼명) : %s " % (btns.n))
-                    print("t (버튼유형) : %s " % (btns.t))
-                    print("u1 (버튼링크1) : %s " % (btns.u1))
-                    print("u2 (버튼링크2) : %s " % (btns.u2))
-        i += 1
+        print("\n============알림톡 템플릿 ============")
+        print("templateCode (템플릿 코드) : %s" % info.templateCode)
+        print("templateName (템플릿 제목) : %s" % info.templateName)
+        print("template (템플릿 내용) : %s" % info.template)
+        print("plusFriendID (플러스친구 아이디) : %s" % info.plusFriendID)
+        if info.btns is not None:
+            for btns in info.btns:
+                print("-버톤 목록 ")
+                print("n (버튼명) : %s" % btns.n)
+                print("t (버튼유형) : %s" % btns.t)
+                print("u1 (버튼링크1) : %s" % btns.u1)
+                print("u2 (버튼링크2) : %s" % btns.u2)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

@@ -61,14 +61,24 @@ try:
     print("total (검색결과 건수) : %s " % response.total)
     print("perPage (페이지당 검색개수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
-    print("pageCount (페이지 개수) : %s " % response.pageCount)
+    print("pageCount (페이지 개수) : %s " % response.pageCount) + '\n'
 
-    i = 1
+    print("========== 전송결과 정보 배열 ==========")
     for info in response.list:
-        print("====== 전송내역 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-        i += 1
+        print("state (전송 상태코드) : %s" % info.state)
+        print("sendDT (전송일시) : %s" % info.sendDT)
+        print("result (전송결과 코드) : %s" % info.result)
+        print("resultDT (전송결과 수신일시) : %s" % info.resultDT)
+        print("contentType (카카오톡 유형) : %s" % info.contentType)
+        print("receiveNum (수신번호) : %s" % info.receiveNum)
+        print("receiveName (수신자명) : %s" % info.receiveName)
+        print("content (알림톡/친구톡 내용) : %s" % info.content)
+        print("altContentType (대체문자 전송타입) : %s" % info.altContentType)
+        print("altSendDT (대체문자 전송일시) : %s" % info.altSendDT)
+        print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)
+        print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
+        print("receiptNum (접수번호) : %s" % info.receiptNum)
+        print("requestNum (요청번호) : %s" % info.requestNum) + '\n'
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

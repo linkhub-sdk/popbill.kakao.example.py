@@ -31,12 +31,10 @@ try:
 
     response = kakaoService.listPlusFriendID(CorpNum, UserID)
 
-    i = 1
     for info in response:
-        print("====== 플러스친구 [%d] ======" % i)
-        for key, value in info.__dict__.items():
-            print("%s : %s" % (key, value))
-        i += 1
+        print("plusFriendID (플러스친구 아이디) : %s" % info.plusFriendID)
+        print("plusFriendName (플러스친구 이름) : %s" % info.plusFriendName)
+        print("regDT (등록일시) : %s" % info.regDT)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
