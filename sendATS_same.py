@@ -64,8 +64,8 @@ try:
     # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     requestNum = ""
 
-    receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, content, altContent,
-                                            altSendType, sndDT, KakaoMessages, UserID, requestNum)
+    receiptNum = kakaoService.sendATS_same(CorpNum, templateCode, snd, content, altContent,
+                                           altSendType, sndDT, KakaoMessages, UserID, requestNum)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 

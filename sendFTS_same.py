@@ -85,8 +85,8 @@ try:
     # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     requestNum = ""
 
-    receiptNum = kakaoService.sendFTS_multi(CorpNum, plusFriendID, snd, content, altContent, altSendType,
-                                            sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum)
+    receiptNum = kakaoService.sendFTS_same(CorpNum, plusFriendID, snd, content, altContent, altSendType,
+                                           sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:
