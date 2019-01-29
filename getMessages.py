@@ -36,7 +36,7 @@ try:
     print("plusFriendID (플러스친구 아이디): %s " % response.plusFriendID)
     print("sendNum (발신번호): %s " % response.sendNum)
     print("altContent ([동보] 대체문자 내용): %s " % response.altContent)
-    print("altSendType (대체문자 유형): %s " % response.sndDT)
+    print("altSendType (대체문자 유형): %s " % response.altSendType)
     print("reserveDT (예약일시): %s " % response.reserveDT)
     print("adsYN (광고여부): %s " % response.adsYN)
     print("imageURL (친구톡 이미지 URL): %s " % response.imageURL)
