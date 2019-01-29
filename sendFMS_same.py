@@ -56,7 +56,8 @@ try:
     # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
-    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
+    # [배열] 친구톡 전송정보 최대 1,000개 전송 가능
+    KakaoMessages = []
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(

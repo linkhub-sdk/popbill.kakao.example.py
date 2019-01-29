@@ -49,7 +49,8 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
+    # [배열] 알림톡 전송정보 최대 1,000개 전송 가능
+    KakaoMessages = []
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(

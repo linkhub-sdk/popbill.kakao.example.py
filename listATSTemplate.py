@@ -39,7 +39,7 @@ try:
         print("template (템플릿 내용) : %s" % info.template)
         if info.btns is not None:
             for btns in info.btns:
-                print("\n===btns ([배열]버톤 목록)===")
+                print("\n===btns ([배열]버튼 목록)===")
                 print("n (버튼명) : %s" % btns.n)
                 print("t (버튼유형) : %s" % btns.t)
                 print("u1 (버튼링크1) : %s" % btns.u1)

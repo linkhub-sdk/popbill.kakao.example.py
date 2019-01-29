@@ -50,7 +50,8 @@ try:
     # 이미지 링크 URL
     imageURL = "http://www.linkhub.co.kr"
 
-    KakaoMessages = []  # 1회 최대 전송 1,000건 전송 가능
+    # [배열] 친구톡 전송정보 최대 1,000개 전송 가능
+    KakaoMessages = []
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
@@ -58,16 +59,6 @@ try:
                 rcvnm="김현진",  # 수신자 이름
                 msg="안녕하세요 김현진님 링크허브입니다.",  # 친구톡 내용 (최대 400자)
                 altmsg="(친구톡 대체문자) 안녕하세요 김현진님 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
-            )
-        )
-
-    for x in range(0, 10):
-        KakaoMessages.append(
-            KakaoReceiver(
-                rcv="0102345678",  # 수신번호
-                rcvnm="kimhyunjin",  # 수신자 이름
-                msg="안녕하세요 KIMHYUNJIN님 링크허브입니다.",  # 친구톡 내용 (최대 400자)
-                altmsg="(친구톡 대체문자) 안녕하세요 KIMHYUNJIN님 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
             )
         )
 
