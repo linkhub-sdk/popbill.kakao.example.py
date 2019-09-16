@@ -15,6 +15,7 @@ from popbill import KakaoService, PopbillException
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 알림톡/친구톡 전송단가를 확인합니다.

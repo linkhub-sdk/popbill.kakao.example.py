@@ -15,6 +15,7 @@ from popbill import KakaoService, PopbillException
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 전송요청번호(requestNum)를 할당한 알림톡/친구톡 예약전송건을 취소합니다.

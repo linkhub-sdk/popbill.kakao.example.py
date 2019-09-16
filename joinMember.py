@@ -15,9 +15,10 @@ from popbill import KakaoService, PopbillException, JoinForm
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
-파트너의 연동회원으로 회원가입을 요청합니다.     
+파트너의 연동회원으로 회원가입을 요청합니다.
 - 아이디 중복 확인은 CheckID API를 통해 확인 하시길 바랍니다.
 '''
 

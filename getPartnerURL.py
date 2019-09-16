@@ -15,6 +15,7 @@ from popbill import KakaoService, PopbillException
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 파트너 포인트 충전 팝업 URL을 반환합니다.

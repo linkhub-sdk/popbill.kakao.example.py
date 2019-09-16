@@ -15,6 +15,7 @@ from popbill import KakaoService, PopbillException, KakaoButton
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 친구톡(텍스트) 전송을 요청합니다.
@@ -49,7 +50,7 @@ try:
     sndDT = ""
 
     # 수신번호
-    receiver = "01012349876"
+    receiver = "010000111"
 
     # 수신자 이름
     receiverName = "partner"

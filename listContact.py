@@ -15,6 +15,7 @@ from popbill import KakaoService, PopbillException
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
+kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팝빌 연동회원의 담당자 목록을 확인합니다.
