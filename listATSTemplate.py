@@ -37,7 +37,7 @@ try:
         print("\n============알림톡 템플릿 ============")
         print("templateCode (템플릿 코드) : %s" % info.templateCode)
         print("templateName (템플릿 제목) : %s" % info.templateName)
-        print("plusFriendID (플러스친구 아이디) : %s" % info.plusFriendID)
+        print("plusFriendID (카카오톡 채널 아이디) : %s" % info.plusFriendID)
         print("template (템플릿 내용) : %s" % info.template)
         if info.btns is not None:
             for btns in info.btns:
