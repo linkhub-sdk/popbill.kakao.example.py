@@ -19,6 +19,7 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팝빌에 등록된 플러스친구 목록을 반환 합니다.
+- https://docs.popbill.com/kakao/python/api#ListPlusFriendID
 '''
 
 try:

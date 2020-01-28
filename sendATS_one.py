@@ -20,6 +20,7 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 '''
 단건의 알림톡을 전송합니다.
 - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
+- https://docs.popbill.com/kakao/python/api#SendATS_one
 '''
 
 try:

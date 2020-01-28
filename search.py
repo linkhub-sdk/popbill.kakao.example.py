@@ -17,6 +17,10 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
+'''
+검색조건에 해당하는 카카오톡 전송내역 목록을 조회합니다. (최대 검색기간 : 6개월 이내)
+- https://docs.popbill.com/kakao/python/api#Search
+'''
 try:
     print("=" * 15 + " 알림톡/친구톡 목록 조회 " + "=" * 15)
 

@@ -19,6 +19,7 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 알림톡 템플릿 목록을 확인 합니다.
+- https://docs.popbill.com/kakao/python/api#ListATSTemplate
 '''
 
 try:

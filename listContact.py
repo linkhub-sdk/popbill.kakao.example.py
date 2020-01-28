@@ -19,6 +19,7 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 
 '''
 팝빌 연동회원의 담당자 목록을 확인합니다.
+- https://docs.popbill.com/kakao/python/api#ListContact
 '''
 
 try:
