@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 발신번호 관리 URL을 반환합니다.

@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌에 등록된 플러스친구 목록을 반환 합니다.

@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException, KakaoButton
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 단건의 알림톡을 전송합니다.

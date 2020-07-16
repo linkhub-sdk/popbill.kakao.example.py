@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException, JoinForm
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 파트너의 연동회원으로 회원가입을 요청합니다.

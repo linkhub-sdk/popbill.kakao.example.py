@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 알림톡 템플릿 목록을 확인 합니다.

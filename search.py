@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 try:
     print("=" * 15 + " 알림톡/친구톡 목록 조회 " + "=" * 15)

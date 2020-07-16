@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException, KakaoButton, KakaoReceiver
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 [동보전송] 친구톡(텍스트) 전송을 요청합니다.

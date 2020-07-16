@@ -16,6 +16,7 @@ from popbill import KakaoService, PopbillException, ContactInfo
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
+kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 연동회원의 담당자를 신규로 등록합니다.
