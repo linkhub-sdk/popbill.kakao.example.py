@@ -20,6 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인합니다.
+- https://docs.popbill.com/kakao/python/api#GetMessagesRN
 '''
 
 try:
@@ -35,7 +36,7 @@ try:
 
     print("contentType (카카오톡 유형): %s " % response.contentType)
     print("templateCode (템플릿코드): %s " % response.templateCode)
-    print("plusFriendID (플러스친구 아이디): %s " % response.plusFriendID)
+    print("plusFriendID (카카오톡 채널 아이디): %s " % response.plusFriendID)
     print("sendNum (발신번호): %s " % response.sendNum)
     print("altContent ([동보] 대체문자 내용): %s " % response.altContent)
     print("altSendType (대체문자 유형): %s " % response.altSendType)

@@ -21,6 +21,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 '''
 파트너의 연동회원으로 회원가입을 요청합니다.
 - 아이디 중복 확인은 CheckID API를 통해 확인 하시길 바랍니다.
+- https://docs.popbill.com/kakao/python/api#JoinMember
 '''
 
 try:

@@ -20,6 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 연동회원의 회사 정보를 수정합니다.
+- https://docs.popbill.com/kakao/python/api#UpdateCorpInfo
 '''
 
 try:

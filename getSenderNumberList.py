@@ -20,6 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 팝빌에 등록된 발신번호 목록을 확인합니다.
+- https://docs.popbill.com/kakao/python/api#GetSenderNumberList
 '''
 
 try:

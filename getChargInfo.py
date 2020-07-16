@@ -20,6 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 
 '''
 연동회원의 알림톡,친구톡 API 서비스 과금정보를 확인합니다.
+- https://docs.popbill.com/kakao/python/api#GetChargeInfo
 '''
 
 try:

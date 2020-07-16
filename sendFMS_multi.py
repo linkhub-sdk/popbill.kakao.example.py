@@ -22,6 +22,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 [대량전송] 친구톡(이미지) 전송을 요청합니다.
 - 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
 - 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 이미지 높이/너비 비율 1.333 이하, 1/2 이상
+- https://docs.popbill.com/kakao/python/api#SendFMS_multi
 '''
 
 try:
@@ -33,7 +34,7 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    # 팝빌에 등록된 플러스 친구 아아디
+    # 팝빌에 등록된 카카오톡 채널 아아디
     plusFriendID = "@팝빌"
 
     # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
