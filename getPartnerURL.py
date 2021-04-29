@@ -17,6 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 파트너 포인트 충전 팝업 URL을 반환합니다.

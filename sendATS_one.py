@@ -17,6 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 단건의 알림톡을 전송합니다.

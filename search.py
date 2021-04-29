@@ -17,6 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 검색조건에 해당하는 카카오톡 전송내역 목록을 조회합니다. (최대 검색기간 : 6개월 이내)
@@ -33,10 +34,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20190101"
+    SDate = "20210401"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20190118"
+    EDate = "20210430"
 
     # 전송상태 배열 [0-대기, 1-전송중, 2-성공, 3-대체 4-실패, 5-취소]
     State = ["0", "1", "2", "3", "4", "5"]
@@ -84,7 +85,7 @@ try:
         print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)
         print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
         print("receiptNum (접수번호) : %s" % info.receiptNum)
-        print("requestNum (요청번호) : %s" % info.requestNum) + '\n'
+        print("requestNum (요청번호) : %s" % info.requestNum  + '\n')
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

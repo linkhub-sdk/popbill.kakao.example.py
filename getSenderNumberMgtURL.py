@@ -17,6 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 발신번호 관리 URL을 반환합니다.

@@ -17,6 +17,7 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌 회원아이디 중복여부를 확인합니다.
