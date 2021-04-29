@@ -207,3 +207,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
+.ftpconfig
