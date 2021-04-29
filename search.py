@@ -68,7 +68,7 @@ try:
     print("total (검색결과 건수) : %s " % response.total)
     print("perPage (페이지당 검색개수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
-    print("pageCount (페이지 개수) : %s " % response.pageCount) + '\n'
+    print("pageCount (페이지 개수) : %s " % response.pageCount)
 
     print("========== 전송결과 정보 배열 ==========")
     for info in response.list:
