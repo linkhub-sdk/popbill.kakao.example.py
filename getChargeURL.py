@@ -17,7 +17,8 @@ kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
 kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
-v
+kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
+
 
 '''
 팝빌 연동회원 포인트 충전 URL을 반환합니다.
