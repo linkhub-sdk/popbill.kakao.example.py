@@ -65,7 +65,7 @@ try:
                 rcvnm="linkhub",  # 수신자 이름
                 msg=content,
                 altmsg="수신번호 010-456-456 알림톡 대체문자",  # 대체문자 내용 (최대 2000byte)
-                interOPRefKey="20200728-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
+                interOPRefKey="20211201-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
 
             )
         )
