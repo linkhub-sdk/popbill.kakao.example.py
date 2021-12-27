@@ -41,6 +41,8 @@ try:
         print("templateName (템플릿 제목) : %s" % info.templateName)
         print("plusFriendID (카카오톡 채널 아이디) : %s" % info.plusFriendID)
         print("template (템플릿 내용) : %s" % info.template)
+        print("ads (광고 메시지) : %s " % info.ads)
+        print("appendix (부가 메시지) : %s " % info.appendix)
         if info.btns is not None:
             for btns in info.btns:
                 print("\n===btns ([배열]버튼 목록)===")
