@@ -20,9 +20,10 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-친구톡(이미지) 전송을 요청합니다.
-- 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
-- 이미지 전송규격 / jpg 포맷, 용량 최대 500KByte, 이미지 높이/너비 비율 1.333 이하, 1/2 이상
+이미지가 첨부된 1건의 친구톡 전송을 팝빌에 접수합니다.
+- 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
+- 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
+- 대체문자의 경우, 포토문자(MMS) 형식은 지원하고 있지 않습니다.
 - https://docs.popbill.com/kakao/python/api#SendFMS_one
 '''
 
@@ -38,8 +39,8 @@ try:
     # 팝빌에 등록된 카카오톡 채널 아아디
     plusFriendID = "@팝빌"
 
-    # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "07043042992"
+    # 팝빌에 사전 등록된 발신번호
+    snd = ""
 
     # 친구톡 내용 (최대 400자)
     content = "친구톡 내용"
@@ -47,21 +48,24 @@ try:
     # 대체문자 내용 (최대 2000byte)
     altContent = "대체문자 내용"
 
-    # 대체문자 유형 [공백-미전송, C-친구톡내용, A-대체문자내용]
+    # 대체문자 유형 (null , "C" , "A" 중 택 1)
+    # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = "A"
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    # 파일경로
-    # 이미지 전송 규격 (전송포맷-JPG,JPEG / 용량제한-최대 500Kbte / 이미지 높이/너비 비율 : 1.333 이하, 1/2 이상)
+    # 첨부이미지 파일 경로
+    # 이미지 파일 규격: 전송 포맷 - JPG 파일 (.jpg, .jpeg), 용량 - 최대 500 Kbyte, 크기 - 가로 500px 이상, 가로 기준으로 세로 0.5 ~ 1.3배 비율 가능
     filePath = "test.jpg"
 
     # 이미지 링크 URL
+    # └ 수신자가 친구톡 상단 이미지 클릭시 호출되는 URL
+    # 미입력시 첨부된 이미지를 링크 기능 없이 표시
     imageURL = "http://www.linkhub.co.kr"
 
     # 수신번호
-    receiver = "01012345678"
+    receiver = ""
 
     # 수신자 이름
     receiverName = "partner"

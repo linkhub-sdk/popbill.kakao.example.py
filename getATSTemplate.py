@@ -20,7 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-등록된 알림톡 템플릿의 정보를 확인합니다.
+승인된 알림톡 템플릿의 정보를 확인합니다.
 - https://docs.popbill.com/kakao/python/api#GetATSTemplate
 '''
 

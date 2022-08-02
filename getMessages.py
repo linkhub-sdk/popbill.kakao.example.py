@@ -20,7 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-알림톡/친구톡 요청시 발급받은 접수번호(receiptNum)로 전송상태를 확인합니다.
+팝빌에서 반환받은 접수번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
 - https://docs.popbill.com/kakao/python/api#GetMessages
 '''
 

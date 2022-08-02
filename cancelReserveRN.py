@@ -20,8 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-전송요청번호(requestNum)를 할당한 알림톡/친구톡 예약전송건을 취소합니다.
-- 예약전송 취소는 예약시간 10분전까지만 가능합니다.
+파트너가 할당한 전송요청 번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
 - https://docs.popbill.com/kakao/python/api#CancelReserveRN
 '''
 
@@ -32,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 예약 알림톡/친구톡 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20211201-001"
+    requestNum = ""
 
     result = kakaoService.cancelReserveRN(CorpNum, requestNum)
 

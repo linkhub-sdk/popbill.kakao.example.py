@@ -20,7 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-전송요청번호(requestNum)를 할당한 알림톡/친구톡 전송내역 및 전송상태를 확인합니다.
+파트너가 할당한 전송요청 번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
 - https://docs.popbill.com/kakao/python/api#GetMessagesRN
 '''
 
@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 알림톡/친구톡 전송 요청시 할당한 전송요청번호(requestNum)
-    requestNum = "20210429-001"
+    requestNum = "20220803-001"
 
     response = kakaoService.getMessagesRN(CorpNum, requestNum)
 

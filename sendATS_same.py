@@ -20,8 +20,9 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-[동보전송] 알림톡 전송을 요청합니다.
+승인된 템플릿 내용을 작성하여 다수건의 알림톡 전송을 팝빌에 접수하며, 모든 수신자에게 동일 내용을 전송합니다. (최대 1,000건)
 - 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
+- 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://docs.popbill.com/kakao/python/api#SendATS_same
 '''
 
@@ -34,12 +35,13 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    # 알림톡 템플릿 코드
-    # 승인된 알림톡 템플릿 코드는 ListATStemplate API, GetATSTemplateMgtURL API, 혹은 팝빌사이트에서 확인이 가능합니다.
+    # 승인된 알림톡 템플릿코드
+    # └ 알림톡 템플릿 관리 팝업 URL(GetATSTemplateMgtURL API) 함수, 알림톡 템플릿 목록 확인(ListATStemplate API) 함수를 호출하거나
+    #   팝빌사이트에서 승인된 알림톡 템플릿 코드를  확인 가능.
     templateCode = "019020000163"
 
-    # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "07043042991"
+    # 팝빌에 사전 등록된 발신번호
+    snd = ""
 
     # 알림톡 내용 (최대 1000자)
     # 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
@@ -53,7 +55,8 @@ try:
     # [동보] 대체문자 내용 (최대 2000byte)
     altContent = "[테스트] 알림톡 대체 문자"
 
-    # 대체문자 유형 [공백-미전송, C-알림톡내용, A-대체문자내용]
+    # 대체문자 유형 (null , "C" , "A" 중 택 1)
+    # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = "A"
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
@@ -64,7 +67,7 @@ try:
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="010111222",  # 수신번호
+                rcv="",  # 수신번호
                 rcvnm="popbill"  # 수신자 이름
             )
         )

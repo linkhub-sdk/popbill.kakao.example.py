@@ -20,7 +20,7 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-해당 사업자의 파트너 연동회원 가입여부를 확인합니다.
+사업자번호를 조회하여 연동회원 가입여부를 확인합니다.
 - https://docs.popbill.com/kakao/python/api#CheckIsMember
 '''
 

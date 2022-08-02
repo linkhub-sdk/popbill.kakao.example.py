@@ -20,8 +20,9 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
-[대량전송] 친구톡(텍스트) 전송을 요청합니다.
-- 친구톡은 심야 전송(20:00~08:00)이 제한됩니다.
+텍스트로 구성된 다수건의 친구톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
+- 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
+- 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://docs.popbill.com/kakao/python/api#SendFTS_multi
 '''
 
@@ -37,10 +38,11 @@ try:
     # 팝빌에 등록된 카카오톡 채널 아아디
     plusFriendID = "@팝빌"
 
-    # 발신번호 (팝빌에 등록된 발신번호만 이용가능)
-    snd = "01043245117"
+    # 팝빌에 사전 등록된 발신번호
+    snd = ""
 
-    # 대체문자 유형 [공백-미전송, C-친구톡내용, A-대체문자내용]
+    # 대체문자 유형 (null , "C" , "A" 중 택 1)
+    # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = "A"
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
@@ -51,7 +53,7 @@ try:
     for x in range(0, 100):
         KakaoMessages.append(
             KakaoReceiver(
-                rcv="010111222",  # 수신번호
+                rcv="",  # 수신번호
                 rcvnm="TESTER",  # 수신자 이름
                 msg="안녕하세요 링크허브입니다.",  # 친구톡 내용 (최대 1000자)
                 altmsg="(친구톡 대체문자) 안녕하세요 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
