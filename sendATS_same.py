@@ -52,6 +52,10 @@ try:
     content += "팝빌 파트너센터 : 1600-8536\n"
     content += "support@linkhub.co.kr"
 
+    # 대체문자 제목
+    # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    altSubject = "대체문자 제목"
+
     # [동보] 대체문자 내용 (최대 2000byte)
     altContent = "[테스트] 알림톡 대체 문자"
 
@@ -62,13 +66,14 @@ try:
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    # [배열] 알림톡 전송정보 최대 1,000개 전송 가능
+    # 수신정보 배열, 최대 1000건
     KakaoMessages = []
     for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
                 rcv="",  # 수신번호
-                rcvnm="popbill"  # 수신자 이름
+                rcvnm="popbill",  # 수신자 이름
+                interOPRefKey="20220803" + str(x) # 파트너 지정키
             )
         )
 
@@ -91,7 +96,7 @@ try:
     # )
 
     receiptNum = kakaoService.sendATS_same(CorpNum, templateCode, snd, content, altContent,
-                                           altSendType, sndDT, KakaoMessages, UserID, requestNum, btns)
+                                           altSendType, sndDT, KakaoMessages, UserID, requestNum, btns, altSubject)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 

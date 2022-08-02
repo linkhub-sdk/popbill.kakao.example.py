@@ -44,6 +44,10 @@ try:
     # [동보] 친구톡 내용 (최대 400자)
     content = "안녕하세요 팝빌 플친님 파이썬입니다."
 
+    # 대체문자 제목
+    # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    altSubject = "대체문자 제목"
+
     # [동보] 대체문자 내용 (최대 2000byte)
     altContent = "(친구톡 대체문자) 안녕하세요 팝빌 플친님 파이썬입니다."
 
@@ -102,7 +106,7 @@ try:
 
     receiptNum = kakaoService.sendFMS_same(CorpNum, plusFriendID, snd, content, altContent,
                                            altSendType, sndDT, filePath, imageURL, KakaoMessages,
-                                           KakaoButtons, adsYN, UserID, requestNum)
+                                           KakaoButtons, adsYN, UserID, requestNum, altSubject)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

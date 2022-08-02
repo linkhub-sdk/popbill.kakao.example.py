@@ -90,6 +90,8 @@ try:
         print("receiveNum (수신번호) : %s" % info.receiveNum)
         print("receiveName (수신자명) : %s" % info.receiveName)
         print("content (알림톡/친구톡 내용) : %s" % info.content)
+        print("altSubject (대체문자 제목) : %s" % info.altSubject)
+        print("altContent (대체문자 내용) : %s" % info.altContent)
         print("altContentType (대체문자 전송타입) : %s" % info.altContentType)
         print("altSendDT (대체문자 전송일시) : %s" % info.altSendDT)
         print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)

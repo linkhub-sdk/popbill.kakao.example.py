@@ -52,7 +52,12 @@ try:
     content += "팝빌 파트너센터 : 1600-8536\n"
     content += "support@linkhub.co.kr"
 
-    # 대체문자 내용 (최대 2000byte)
+    # 대체문자 제목
+    # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    altSubject = "대체문자 제목"
+
+    # 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
+    # └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     altContent = "알림톡 대체 문자"
 
     # 대체문자 유형 (null , "C" , "A" 중 택 1)
@@ -87,7 +92,7 @@ try:
     # )
 
     receiptNum = kakaoService.sendATS(CorpNum, templateCode, snd, content, altContent,
-                                      altSendType, sndDT, receiver, receiverName, UserID, requestNum, btns)
+                                      altSendType, sndDT, receiver, receiverName, UserID, requestNum, btns, altSubject)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

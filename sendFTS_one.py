@@ -44,7 +44,12 @@ try:
     # 친구톡 내용 (최대 1000자)
     content = "친구톡 내용 입니다."
 
-    # 대체문자 내용 (최대 2000byte)
+    # 대체문자 제목
+    # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    altSubject = "대체문자 제목"
+
+    # 대체문자 유형(altSendType)이 "A"일 경우, 대체문자로 전송할 내용 (최대 2000byte)
+    # └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     altContent = "대체문자 내용"
 
     # 대체문자 유형 (null , "C" , "A" 중 택 1)
@@ -88,7 +93,7 @@ try:
     requestNum = ""
 
     receiptNum = kakaoService.sendFTS(CorpNum, plusFriendID, snd, content, altContent, altSendType, sndDT,
-                                      receiver, receiverName, KakaoButtons, adsYN, UserID, requestNum)
+                                      receiver, receiverName, KakaoButtons, adsYN, UserID, requestNum, altSubject)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

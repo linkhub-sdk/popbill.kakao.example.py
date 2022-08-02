@@ -45,18 +45,33 @@ try:
     # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = "A"
 
+    # 대체문자 제목
+    # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+    # - 수신정보 배열에 대체문자 제목이 입력되지 않은 경우 적용.
+    # - 모든 수신자에게 다른 제목을 보낼 경우 70번 라인에 있는 altsjt 를 이용.
+    altSubject = "대체문자 제목"
+
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
 
-    # [배열] 친구톡 전송정보 최대 1,000개 전송 가능
+    # 수신정보 배열, 최대 1,000건
     KakaoMessages = []
-    for x in range(0, 100):
+    for x in range(0, 10):
         KakaoMessages.append(
             KakaoReceiver(
                 rcv="",  # 수신번호
                 rcvnm="TESTER",  # 수신자 이름
                 msg="안녕하세요 링크허브입니다.",  # 친구톡 내용 (최대 1000자)
-                altmsg="(친구톡 대체문자) 안녕하세요 링크허브입니다."  # 대체문자 내용 (최대 2000byte)
+                
+                # 대체문자 제목
+                # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
+                # - 모든 수신자에게 동일한 제목을 보낼 경우 배열의 모든 원소에 동일한 값을 입력하거나
+                #   값을 입력하지 않고 69번 라인에 있는 altSubject 를 이용
+                altsjt="(친구톡 대체문자 제목) [링크허브]",
+                
+                # 대체문자 내용 (최대 2000byte)
+                altmsg="(친구톡 대체문자) 안녕하세요 링크허브입니다.",
+                interOPRefKey="20220803-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
             )
         )
         # 수신자별 개별 버튼내용 전송하는 경우
@@ -115,7 +130,7 @@ try:
     requestNum = ""
 
     receiptNum = kakaoService.sendFTS_multi(CorpNum, plusFriendID, snd, "", "", altSendType,
-                                            sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum)
+                                            sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum, altSubject)
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:
