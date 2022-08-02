@@ -30,13 +30,10 @@ try:
     # 팝빌회원 사업자번호
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     #템플릿 코드
     templateCode = "021010000076"
 
-    templateInfo = kakaoService.getATSTemplate(CorpNum, templateCode, UserID)
+    templateInfo = kakaoService.getATSTemplate(CorpNum, templateCode)
 
     print("templateCode (응답코드) : %s " % templateInfo.templateCode)
     print("templateName (응답메시지) : %s " % templateInfo.templateName)

@@ -30,10 +30,7 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    response = kakaoService.getCorpInfo(CorpNum, UserID)
+    response = kakaoService.getCorpInfo(CorpNum)
 
     tmp = "ceoname(대표자성명) : " + response.ceoname + "\n"
     tmp += "corpName(상호) : " + response.corpName + "\n"

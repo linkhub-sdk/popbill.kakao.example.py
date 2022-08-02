@@ -30,10 +30,7 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    response = kakaoService.listATSTemplate(CorpNum, UserID)
+    response = kakaoService.listATSTemplate(CorpNum)
 
     for info in response:
         print("\n============알림톡 템플릿 ============")

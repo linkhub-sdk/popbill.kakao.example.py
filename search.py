@@ -30,9 +30,6 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
     SDate = "20220701"
@@ -70,8 +67,7 @@ try:
     # 정렬방향 [D-내림차순, A-오름차순]
     Order = "D"
 
-    response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order,
-                                   UserID)
+    response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order)
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)

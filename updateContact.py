@@ -30,9 +30,6 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
     # 담당자 정보
     updateInfo = ContactInfo(
 
@@ -52,7 +49,7 @@ try:
         searchRole=1
     )
 
-    result = kakaoService.updateContact(CorpNum, updateInfo, UserID)
+    result = kakaoService.updateContact(CorpNum, updateInfo)
 
     print("처리결과 : [%d] %s" % (result.code, result.message))
 except PopbillException as PE:

@@ -30,10 +30,7 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
-    # 팝빌회원 아이디
-    UserID = testValue.testUserID
-
-    response = kakaoService.listPlusFriendID(CorpNum, UserID)
+    response = kakaoService.listPlusFriendID(CorpNum)
 
     for info in response:
         print("plusFriendID (카카오톡 채널 검색용 아이디) : %s" % info.plusFriendID)
