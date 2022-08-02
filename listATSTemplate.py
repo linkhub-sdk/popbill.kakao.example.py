@@ -39,7 +39,7 @@ try:
         print("\n============알림톡 템플릿 ============")
         print("templateCode (템플릿 코드) : %s" % info.templateCode)
         print("templateName (템플릿 제목) : %s" % info.templateName)
-        print("plusFriendID (카카오톡 채널 아이디) : %s" % info.plusFriendID)
+        print("plusFriendID (카카오톡 채널 검색용 아이디) : %s" % info.plusFriendID)
         print("template (템플릿 내용) : %s" % info.template)
         print("ads (광고 메시지) : %s " % info.ads)
         print("appendix (부가 메시지) : %s " % info.appendix)

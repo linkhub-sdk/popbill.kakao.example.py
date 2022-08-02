@@ -37,7 +37,7 @@ try:
 
     print("contentType (카카오톡 유형): %s " % response.contentType)
     print("templateCode (템플릿코드): %s " % response.templateCode)
-    print("plusFriendID (카카오톡 채널 아이디): %s " % response.plusFriendID)
+    print("plusFriendID (카카오톡 채널 검색용 아이디): %s " % response.plusFriendID)
     print("sendNum (발신번호): %s " % response.sendNum)
     print("altSubject ([동보] 대체문자 제목): %s " % response.altSubject)
     print("altContent ([동보] 대체문자 내용): %s " % response.altContent)
