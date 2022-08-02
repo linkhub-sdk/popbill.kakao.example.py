@@ -43,6 +43,10 @@ try:
         print("template (템플릿 내용) : %s" % info.template)
         print("ads (광고 메시지) : %s " % info.ads)
         print("appendix (부가 메시지) : %s " % info.appendix)
+        print("secureYN (보안템플릿 여부) : %s" % info.secureYN)
+        print("state (템플릿 상태) : %s" % info.state)
+        print("stateDT (템플릿 상태 일시) : %s" % info.stateDT)
+
         if info.btns is not None:
             for btns in info.btns:
                 print("\n===btns ([배열]버튼 목록)===")

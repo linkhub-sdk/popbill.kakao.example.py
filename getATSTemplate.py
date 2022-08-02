@@ -44,6 +44,9 @@ try:
     print("plusFriendID (카카오톡 채널 검색용 아이디) : %s " % templateInfo.plusFriendID)
     print("ads (광고 메시지) : %s " % templateInfo.ads)
     print("appendix (부가 메시지) : %s " % templateInfo.appendix)
+    print("secureYN (보안템플릿 여부) : %s" % templateInfo.secureYN)
+    print("state (템플릿 상태) : %s" % templateInfo.state)
+    print("stateDT (템플릿 상태 일시) : %s" % templateInfo.stateDT)
 
     for btns in templateInfo.btns:
         print("*" * 50)
