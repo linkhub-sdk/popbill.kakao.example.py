@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 알림톡/친구톡 전송요청시 발급받은 접수번호(receiptNum)
-    receiptNum = "020072810561000001"
+    receiptNum = "022080217193700001"
 
     response = kakaoService.getMessages(CorpNum, receiptNum)
 
@@ -55,11 +55,12 @@ try:
     print("requestNum (요청번호) : %s" % response.requestNum +'\n')
 
     print("====== [배열] 버튼 목록 ======")
-    for info in response.btns:
-        print("n (버튼명) : %s" % info.n)
-        print("t (버튼유형) : %s" % info.t)
-        print("u1 (버튼링크1) : %s" % info.u1)
-        print("u2 (버튼링크2) : %s" % info.u2 +'\n')
+    if response.btns is not None:
+        for info in response.btns:
+            print("n (버튼명) : %s" % info.n)
+            print("t (버튼유형) : %s" % info.t)
+            print("u1 (버튼링크1) : %s" % info.u1)
+            print("u2 (버튼링크2) : %s" % info.u2 +'\n')
 
     print("====== 전송결과 정보 배열 ======")
     for info in response.msgs:

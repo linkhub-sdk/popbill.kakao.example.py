@@ -31,7 +31,7 @@ try:
     CorpNum = testValue.testCorpNum
 
     #템플릿 코드
-    templateCode = "021010000076"
+    templateCode = "022040000374"
 
     templateInfo = kakaoService.getATSTemplate(CorpNum, templateCode)
 
@@ -45,12 +45,13 @@ try:
     print("state (템플릿 상태) : %s" % templateInfo.state)
     print("stateDT (템플릿 상태 일시) : %s" % templateInfo.stateDT)
 
-    for btns in templateInfo.btns:
-        print("*" * 50)
-        print("n (버튼명) : %s " % btns.n)
-        print("t (버튼유형) : %s " % btns.t)
-        print("u1 (버튼링크1) : %s " % btns.u1)
-        print("u2 (버튼링크2) : %s " % btns.u2)
+    if templateInfo.btns is not None:
+        for btns in templateInfo.btns:
+            print("*" * 50)
+            print("n (버튼명) : %s " % btns.n)
+            print("t (버튼유형) : %s " % btns.t)
+            print("u1 (버튼링크1) : %s " % btns.u1)
+            print("u2 (버튼링크2) : %s " % btns.u2)
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))
