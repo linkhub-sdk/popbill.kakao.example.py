@@ -21,7 +21,6 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 승인된 템플릿의 내용을 작성하여 다수건의 알림톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
-- 사전에 승인된 템플릿의 내용과 알림톡 전송내용(content)이 다를 경우 전송실패 처리됩니다.
 - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://docs.popbill.com/kakao/python/api#SendATS_multi
 '''
@@ -73,13 +72,13 @@ try:
                 rcv="",  # 수신번호
                 rcvnm="linkhub",  # 수신자 이름
                 msg=content,  # 알림톡 내용 (최대 400자)
-                
+
                 # 대체문자 제목
                 # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
                 # - 모든 수신자에게 동일한 제목을 보낼 경우 배열의 모든 원소에 동일한 값을 입력하거나
                 #   값을 입력하지 않고 63번 라인에 있는 altSubject 를 이용
                 altsjt="(알림톡 대체문자 제목) [링크허브]"+str(x),
-                
+
                 # 대체문자 내용 (최대 2000byte)
                 altmsg="(알림톡 대체문자) 안녕하세요 링크허브입니다.",
                 interOPRefKey="20220803-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
