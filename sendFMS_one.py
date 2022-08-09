@@ -55,7 +55,7 @@ try:
 
     # 대체문자 유형 (null , "C" , "A" 중 택 1)
     # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
-    altSendType = "A"
+    altSendType = ""
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
     sndDT = ""
