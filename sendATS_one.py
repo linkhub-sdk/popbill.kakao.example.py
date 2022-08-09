@@ -59,8 +59,8 @@ try:
     # └ 팝빌이 메시지 길이에 따라 단문(90byte 이하) 또는 장문(90byte 초과)으로 전송처리
     altContent = "알림톡 대체 문자"
 
-    # 대체문자 유형 (null , "C" , "A" 중 택 1)
-    # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    # 대체문자 유형 (None , "C" , "A" 중 택 1)
+    # None = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = ""
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)

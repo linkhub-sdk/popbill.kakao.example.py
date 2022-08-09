@@ -58,8 +58,8 @@ try:
     # [동보] 대체문자 내용 (최대 2000byte)
     altContent = "[테스트] 알림톡 대체 문자"
 
-    # 대체문자 유형 (null , "C" , "A" 중 택 1)
-    # null = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
+    # 대체문자 유형 (None , "C" , "A" 중 택 1)
+    # None = 미전송, C = 알림톡과 동일 내용 전송 , A = 대체문자 내용(altContent)에 입력한 내용 전송
     altSendType = ""
 
     # 예약일시 (작성형식 : yyyyMMddHHmmss)
