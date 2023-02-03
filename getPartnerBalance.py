@@ -21,7 +21,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 파트너의 잔여포인트를 확인합니다.
-- https://docs.popbill.com/kakao/python/api#GetPartnerBalance
+- https://developers.popbill.com/reference/kakaotalk/python/api/point#GetPartnerBalance
 '''
 
 try:

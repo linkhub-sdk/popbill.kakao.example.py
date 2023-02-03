@@ -21,7 +21,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 연동회원의 회사 정보를 수정합니다.
-- https://docs.popbill.com/kakao/python/api#UpdateCorpInfo
+- https://developers.popbill.com/reference/kakaotalk/python/api/member#UpdateCorpInfo
 '''
 
 try:

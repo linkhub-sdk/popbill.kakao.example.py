@@ -21,7 +21,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 파트너가 할당한 전송요청 번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
-- https://docs.popbill.com/kakao/python/api#GetMessagesRN
+- https://developers.popbill.com/reference/kakaotalk/python/api/info#GetMessagesRN
 '''
 
 try:

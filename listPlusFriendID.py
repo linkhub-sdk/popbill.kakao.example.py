@@ -21,7 +21,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 팝빌에 등록한 연동회원의 카카오톡 채널 목록을 확인합니다.
-- https://docs.popbill.com/kakao/python/api#ListPlusFriendID
+- https://developers.popbill.com/reference/kakaotalk/python/api/channel#ListPlusFriendID
 '''
 
 try:

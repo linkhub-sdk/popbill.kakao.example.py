@@ -21,7 +21,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 '''
 승인된 알림톡 템플릿 목록을 확인합니다.
-- https://docs.popbill.com/kakao/python/api#ListATSTemplate
+- https://developers.popbill.com/reference/kakaotalk/python/api/template#ListATSTemplate
 '''
 
 try:
