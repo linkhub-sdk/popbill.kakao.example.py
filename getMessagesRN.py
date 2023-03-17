@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 파트너가 할당한 전송요청 번호를 통해 알림톡/친구톡 전송상태 및 결과를 확인합니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/info#GetMessagesRN
-'''
+"""
 
 try:
     print("=" * 15 + " 알림톡/친구톡 전송결과 확인 " + "=" * 15)
@@ -52,7 +52,7 @@ try:
     print("cancelCnt (취소건수): %s " % response.cancelCnt)
     print("adsYN (광고전송 여부): %s " % response.adsYN)
     print("receiptNum (접수번호) : %s" % response.receiptNum)
-    print("requestNum (요청번호) : %s" % response.requestNum + '\n')
+    print("requestNum (요청번호) : %s" % response.requestNum + "\n")
 
     print("====== [배열] 버튼 목록 ======")
     if response.btns is not None:
@@ -60,7 +60,7 @@ try:
             print("n (버튼명) : %s" % info.n)
             print("t (버튼유형) : %s" % info.t)
             print("u1 (버튼링크1) : %s" % info.u1)
-            print("u2 (버튼링크2) : %s" % info.u2 +'\n')
+            print("u2 (버튼링크2) : %s" % info.u2 + "\n")
 
     print("====== 전송결과 정보 배열 ======")
     for info in response.msgs:
@@ -79,7 +79,7 @@ try:
         print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
         print("receiptNum (접수번호) : %s" % info.receiptNum)
         print("requestNum (요청번호) : %s" % info.requestNum)
-        print("interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey +'\n')
+        print("interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey + "\n")
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

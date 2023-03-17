@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 승인된 알림톡 템플릿 목록을 확인합니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/template#ListATSTemplate
-'''
+"""
 
 try:
     print("=" * 15 + "알림톡 템플릿 목록 확인" + "=" * 15)

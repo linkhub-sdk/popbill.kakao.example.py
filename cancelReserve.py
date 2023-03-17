@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌에서 반환받은 접수번호를 통해 예약접수된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#CancelReserve
-'''
+"""
 
 try:
     print("=" * 15 + " 알림톡/친구톡 예약전송취소 " + "=" * 15)

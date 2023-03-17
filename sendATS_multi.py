@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,11 +19,11 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 승인된 템플릿의 내용을 작성하여 다수건의 알림톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
 - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#SendATSMulti
-'''
+"""
 
 try:
     print("=" * 15 + " 알림톡 대량 전송 " + "=" * 15)
@@ -72,17 +72,14 @@ try:
                 rcv="",  # 수신번호
                 rcvnm="linkhub",  # 수신자 이름
                 msg=content,  # 알림톡 내용 (최대 400자)
-
                 # 대체문자 제목
                 # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
                 # - 모든 수신자에게 동일한 제목을 보낼 경우 배열의 모든 원소에 동일한 값을 입력하거나
                 #   값을 입력하지 않고 63번 라인에 있는 altSubject 를 이용
-                altsjt="(알림톡 대체문자 제목) [링크허브]"+str(x),
-
+                altsjt="(알림톡 대체문자 제목) [링크허브]" + str(x),
                 # 대체문자 내용 (최대 2000byte)
                 altmsg="(알림톡 대체문자) 안녕하세요 링크허브입니다.",
-                interOPRefKey="20220803-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
-
+                interOPRefKey="20220803-" + str(x),  # 파트너 지정키, 수신자 구별용 메모
             )
         )
 
@@ -134,8 +131,20 @@ try:
     #     )
     # )
 
-    receiptNum = kakaoService.sendATS_multi(CorpNum, templateCode, snd, "", "",
-                                            altSendType, sndDT, KakaoMessages, UserID, requestNum, btns, altSubject)
+    receiptNum = kakaoService.sendATS_multi(
+        CorpNum,
+        templateCode,
+        snd,
+        "",
+        "",
+        altSendType,
+        sndDT,
+        KakaoMessages,
+        UserID,
+        requestNum,
+        btns,
+        altSubject,
+    )
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 

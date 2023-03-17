@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,11 +19,11 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 검색조건에 해당하는 카카오톡 전송내역 목록을 조회합니다. (조회기간 단위 : 최대 2개월)
 - 카카오톡 접수일시로부터 6개월 이내 접수건만 조회할 수 있습니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/info#Search
-'''
+"""
 try:
     print("=" * 15 + " 알림톡/친구톡 목록 조회 " + "=" * 15)
 
@@ -67,7 +67,9 @@ try:
     # 정렬방향 [D-내림차순, A-오름차순]
     Order = "D"
 
-    response = kakaoService.search(CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order)
+    response = kakaoService.search(
+        CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order
+    )
 
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
@@ -93,7 +95,7 @@ try:
         print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)
         print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
         print("receiptNum (접수번호) : %s" % info.receiptNum)
-        print("requestNum (요청번호) : %s" % info.requestNum  + '\n')
+        print("requestNum (요청번호) : %s" % info.requestNum + "\n")
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

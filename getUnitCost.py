@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 카카오톡 전송시 과금되는 포인트 단가를 확인합니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/point#GetUnitCost
-'''
+"""
 
 try:
     print("=" * 15 + " 알림톡/친구톡 전송단가 확인 " + "=" * 15)

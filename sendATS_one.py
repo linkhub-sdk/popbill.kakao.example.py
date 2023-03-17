@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,11 +19,11 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 승인된 템플릿의 내용을 작성하여 1건의 알림톡 전송을 팝빌에 접수합니다.
 - 전송실패 시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#SendATSOne
-'''
+"""
 
 try:
     print("=" * 15 + " 알림톡 단건 전송 " + "=" * 15)
@@ -90,8 +90,21 @@ try:
     #     )
     # )
 
-    receiptNum = kakaoService.sendATS(CorpNum, templateCode, snd, content, altContent,
-                                      altSendType, sndDT, receiver, receiverName, UserID, requestNum, btns, altSubject)
+    receiptNum = kakaoService.sendATS(
+        CorpNum,
+        templateCode,
+        snd,
+        content,
+        altContent,
+        altSendType,
+        sndDT,
+        receiver,
+        receiverName,
+        UserID,
+        requestNum,
+        btns,
+        altSubject,
+    )
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

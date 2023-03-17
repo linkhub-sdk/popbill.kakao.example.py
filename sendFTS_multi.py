@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,12 +19,12 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 텍스트로 구성된 다수건의 친구톡 전송을 팝빌에 접수하며, 수신자 별로 개별 내용을 전송합니다. (최대 1,000건)
 - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
 - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#SendFTSMulti
-'''
+"""
 
 try:
     print("=" * 15 + " 친구톡 텍스트 대량 전송 " + "=" * 15)
@@ -62,16 +62,14 @@ try:
                 rcv="",  # 수신번호
                 rcvnm="TESTER",  # 수신자 이름
                 msg="안녕하세요 링크허브입니다.",  # 친구톡 내용 (최대 1000자)
-                
                 # 대체문자 제목
                 # - 메시지 길이(90byte)에 따라 장문(LMS)인 경우에만 적용.
                 # - 모든 수신자에게 동일한 제목을 보낼 경우 배열의 모든 원소에 동일한 값을 입력하거나
                 #   값을 입력하지 않고 69번 라인에 있는 altSubject 를 이용
                 altsjt="(친구톡 대체문자 제목) [링크허브]" + str(x),
-                
                 # 대체문자 내용 (최대 2000byte)
                 altmsg="(친구톡 대체문자) 안녕하세요 링크허브입니다.",
-                interOPRefKey="20220803-"+str(x)    # 파트너 지정키, 수신자 구별용 메모
+                interOPRefKey="20220803-" + str(x),  # 파트너 지정키, 수신자 구별용 메모
             )
         )
         # 수신자별 개별 버튼내용 전송하는 경우
@@ -99,7 +97,6 @@ try:
         # # 개별 버튼정보 리스트 수신정보에 추가
         # KakaoMessages[x].btns = btns
 
-
     # 동일 버튼정보 리스트
     # 버튼내용을 전송하지 않는 경우 빈 리스트 처리
     # 버튼 목록 (최대 5개)
@@ -110,7 +107,7 @@ try:
             n="팝빌 바로가기",  # 버튼명
             t="WL",  # 버튼유형 [DS-배송조회, WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
             u1="http://www.popbill.com",  # [앱링크-iOS, 웹링크-Mobile]
-            u2="http://www.popbill.com"  # [앱링크-Android, 웹링크-PC URL]
+            u2="http://www.popbill.com",  # [앱링크-Android, 웹링크-PC URL]
         )
     )
 
@@ -129,8 +126,21 @@ try:
     # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     requestNum = ""
 
-    receiptNum = kakaoService.sendFTS_multi(CorpNum, plusFriendID, snd, "", "", altSendType,
-                                            sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum, altSubject)
+    receiptNum = kakaoService.sendFTS_multi(
+        CorpNum,
+        plusFriendID,
+        snd,
+        "",
+        "",
+        altSendType,
+        sndDT,
+        KakaoMessages,
+        KakaoButtons,
+        adsYN,
+        UserID,
+        requestNum,
+        altSubject,
+    )
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

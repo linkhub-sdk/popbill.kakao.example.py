@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,10 +19,10 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 팝빌에 등록한 연동회원의 카카오톡 채널 목록을 확인합니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/channel#ListPlusFriendID
-'''
+"""
 
 try:
     print("=" * 15 + "  카카오톡 채널 목록 확인 " + "=" * 15)

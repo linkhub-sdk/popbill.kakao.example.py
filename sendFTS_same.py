@@ -5,7 +5,7 @@ import imp
 
 imp.reload(sys)
 try:
-    sys.setdefaultencoding('UTF8')
+    sys.setdefaultencoding("UTF8")
 except Exception as E:
     pass
 
@@ -19,12 +19,12 @@ kakaoService.IPRestrictOnOff = testValue.IPRestrictOnOff
 kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
-'''
+"""
 텍스트로 구성된 다수건의 친구톡 전송을 팝빌에 접수하며, 모든 수신자에게 동일 내용을 전송합니다. (최대 1,000건)
 - 친구톡의 경우 야간 전송은 제한됩니다. (20:00 ~ 익일 08:00)
 - 전송실패시 사전에 지정한 변수 'altSendType' 값으로 대체문자를 전송할 수 있고, 이 경우 문자(SMS/LMS) 요금이 과금됩니다.
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#SendFTSSame
-'''
+"""
 
 try:
     print("=" * 15 + " 친구톡 텍스트 동보 전송 " + "=" * 15)
@@ -61,12 +61,7 @@ try:
     # [배열] 친구톡 전송정보 최대 1,000개 전송 가능
     KakaoMessages = []
     for x in range(0, 2):
-        KakaoMessages.append(
-            KakaoReceiver(
-                rcv="",  # 수신번호
-                rcvnm="팝친"  # 수신자 이름
-            )
-        )
+        KakaoMessages.append(KakaoReceiver(rcv="", rcvnm="팝친"))  # 수신번호  # 수신자 이름
 
     # 버튼 목록 (최대 5개)
     KakaoButtons = []
@@ -76,7 +71,7 @@ try:
             n="팝빌 바로가기",  # 버튼명
             t="WL",  # 버튼유형 [DS-배송조회, WL-웹링크, AL-앱링크, MD-메시지전달, BK-봇키워드]
             u1="http://www.popbill.com",  # [앱링크-iOS, 웹링크-Mobile]
-            u2="http://www.popbill.com"  # [앱링크-Android, 웹링크-PC URL]
+            u2="http://www.popbill.com",  # [앱링크-Android, 웹링크-PC URL]
         )
     )
 
@@ -95,8 +90,21 @@ try:
     # 1~36자리로 구성. 영문, 숫자, 하이픈(-), 언더바(_)를 조합하여 팝빌 회원별로 중복되지 않도록 할당.
     requestNum = ""
 
-    receiptNum = kakaoService.sendFTS_same(CorpNum, plusFriendID, snd, content, altContent, altSendType,
-                                           sndDT, KakaoMessages, KakaoButtons, adsYN, UserID, requestNum, altSubject)
+    receiptNum = kakaoService.sendFTS_same(
+        CorpNum,
+        plusFriendID,
+        snd,
+        content,
+        altContent,
+        altSendType,
+        sndDT,
+        KakaoMessages,
+        KakaoButtons,
+        adsYN,
+        UserID,
+        requestNum,
+        altSubject,
+    )
     print("접수번호 (receiptNum) : %s" % receiptNum)
 
 except PopbillException as PE:

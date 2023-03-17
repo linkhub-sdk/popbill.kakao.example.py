@@ -24,10 +24,10 @@
 """
 
 # 링크아이디
-LinkID = 'TESTER'
+LinkID = "TESTER"
 
 # 비밀키
-SecretKey = 'SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I='
+SecretKey = "SwWxqU+0TErBXy/9TVjIPEnI0VTUMMSQZtJf3Ed8q3I="
 
 # 연동환경 설정값, 개발용(True), 상업용(False)
 IsTest = True
@@ -44,5 +44,5 @@ IPRestrictOnOff = True
 # 팝빌 API 서비스 고정 IP 사용여부, true-사용, false-미사용, 기본값(false)
 UseStaticIP = False
 
-#로컬시스템 사용여부, 권장(True)
+# 로컬시스템 사용여부, 권장(True)
 UseLocalTimeYN = True
