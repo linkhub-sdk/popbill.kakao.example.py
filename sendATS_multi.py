@@ -49,6 +49,7 @@ try:
     content += "support@linkhub.co.kr"
 
     # 팝빌에 사전 등록된 발신번호
+    # ※ 대체문자를 전송하는 경우에만 필수 입력
     snd = ""
 
     # 대체문자 유형 (None , "C" , "A" 중 택 1)
