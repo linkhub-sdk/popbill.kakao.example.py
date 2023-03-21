@@ -19,12 +19,12 @@ kakaoService.UseStaticIP = testValue.UseStaticIP
 kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
-사용하고자 하는 아이디의 중복여부를 확인합니다.
+팝빌에서 반환받은 접수번호로 접수 건을 식별하여 수신번호에 예약된 카카오톡을 전송 취소합니다. (예약시간 10분 전까지 가능)
 - https://developers.popbill.com/reference/kakaotalk/python/api/send#CancelReservebyRCV
 """
 
 try:
-    print("=" * 15 + " 회원아이디 중복확인 " + "=" * 15)
+    print("=" * 15 + " 예약전송 일부 취소 (접수번호) " + "=" * 15)
 
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum

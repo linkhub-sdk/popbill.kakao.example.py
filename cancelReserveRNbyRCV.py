@@ -24,7 +24,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 """
 
 try:
-    print("=" * 15 + " 회원아이디 중복확인 " + "=" * 15)
+    print("=" * 15 + " 예약전송 일부 취소 (전송 요청번호) " + "=" * 15)
 
     # 팝빌회원 사업자번호 (하이픈 '-' 제외 10자리)
     CorpNum = testValue.testCorpNum
