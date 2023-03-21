@@ -38,9 +38,7 @@ try:
     # 팝빌회원 아이디
     UserID = testValue.testUserID
 
-    response = kakaoService.CancelReserveRNbyRCV(
-        CorpNum, requestNum, receiveNum, UserID
-    )
+    response = kakaoService.CancelReserveRNbyRCV(CorpNum, requestNum, receiveNum, UserID)
 
     print("처리결과 : [%d] %s" % (response.code, response.message))
 except PopbillException as PE:
