@@ -30,10 +30,10 @@ try:
     CorpNum = testValue.testCorpNum
 
     # 카카오톡 예약전송 접수시 팝빌로부터 반환 받은 접수번호
-    ReceiptNum = ""
+    ReceiptNum = "023011114473900001"
 
     # 카카오톡 예약전송 접수시 팝빌로 요청한 수신번호
-    ReceiveNum = ""
+    ReceiveNum = "01011112222"
 
     # 팝빌회원 아이디
     UserID = testValue.testUserID
