@@ -10,7 +10,7 @@ except Exception as E:
     pass
 
 import testValue
-from popbill import KakaoButton, KakaoReceiver, KakaoService, PopbillException
+from popbill import KakaoReceiver, KakaoService, PopbillException
 
 kakaoService = KakaoService(testValue.LinkID, testValue.SecretKey)
 kakaoService.IsTest = testValue.IsTest
