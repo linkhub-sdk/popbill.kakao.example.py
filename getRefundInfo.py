@@ -35,7 +35,7 @@ try:
     # 팝빌회원 팝빌 아이디
     UserID = testValue.testUserID
 
-    response = kakaoService.GetRefundInfo(CorpNum, RefundCode, UserID)
+    response = kakaoService.getRefundInfo(CorpNum, RefundCode, UserID)
 
     print("reqDT (신청일시) : %s " % response.reqDT)
     print("requestPoint (환불 신청포인트) : %s " % response.requestPoint)
