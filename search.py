@@ -29,12 +29,15 @@ try:
     # 팝빌회원 사업자번호("-"제외 10자리)
     CorpNum = testValue.testCorpNum
 
+    # 팝빌회원 아이디
+    UserID = testValue.testUserID
+
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20220701"
+    SDate = "20241201"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20220731"
+    EDate = "20241231"
 
     # 전송상태 배열 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     # └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
@@ -51,11 +54,11 @@ try:
     # - 미입력 시 전체조회
     ReserveYN = "0"
 
-    # 사용자권한별 조회 (true / false 중 택 1)
-    # └ false = 접수한 카카오톡 전체 조회 (관리자권한)
-    # └ true = 해당 담당자 계정으로 접수한 카카오톡만 조회 (개인권한)
+    # 사용자권한별 조회 (True / False 중 택 1)
+    # └ False = 접수한 카카오톡 전체 조회 (관리자권한)
+    # └ True = 해당 담당자 계정으로 접수한 카카오톡만 조회 (개인권한)
     # 미입력시 기본값 false 처리
-    SenderYN = "0"
+    SenderYN = False
 
     # 페이지 번호
     Page = 1
@@ -66,8 +69,12 @@ try:
     # 정렬방향 [D-내림차순, A-오름차순]
     Order = "D"
 
+    # 조회하고자 수신자명
+    # - 미입력시 전체조회
+    QString = ""
+
     response = kakaoService.search(
-        CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order
+        CorpNum, SDate, EDate, State, Item, ReserveYN, SenderYN, Page, PerPage, Order, UserID, QString
     )
 
     print("code (응답코드) : %s " % response.code)
