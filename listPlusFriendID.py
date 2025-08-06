@@ -32,10 +32,10 @@ try:
     response = kakaoService.listPlusFriendID(CorpNum)
 
     for info in response:
-        print("plusFriendID (카카오톡 채널 검색용 아이디) : %s" % info.plusFriendID)
-        print("plusFriendName (카카오톡 채널명) : %s" % info.plusFriendName)
+        print("plusFriendID (검색용 아이디) : %s" % info.plusFriendID)
+        print("plusFriendName (채널명) : %s" % info.plusFriendName)
         print("regDT (등록일시) : %s" % info.regDT)
-        print("state (채널 상태) : %s" % info.state)
+        print("state (채널상태) : %s" % info.state)
         print("stateDT (채널 상태 일시) : %s" % info.stateDT)
 
 except PopbillException as PE:

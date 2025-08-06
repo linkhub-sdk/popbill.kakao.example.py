@@ -34,10 +34,10 @@ try:
 
     # 최대 검색기간 : 6개월 이내
     # 시작일자, 날짜형식(yyyyMMdd)
-    SDate = "20241201"
+    SDate = "20250801"
 
     # 종료일자, 날짜형식(yyyyMMdd)
-    EDate = "20241231"
+    EDate = "20250831"
 
     # 전송상태 배열 ("0" , "1" , "2" , "3" , "4" , "5" 중 선택, 다중 선택 가능)
     # └ 0 = 전송대기 , 1 = 전송중 , 2 = 전송성공 , 3 = 대체문자 전송 , 4 = 전송실패 , 5 = 전송취소
@@ -80,15 +80,15 @@ try:
     print("code (응답코드) : %s " % response.code)
     print("message (응답메시지) : %s " % response.message)
     print("total (검색결과 건수) : %s " % response.total)
-    print("perPage (페이지당 검색개수) : %s " % response.perPage)
+    print("perPage (페이지 당 목록 건수) : %s " % response.perPage)
     print("pageNum (페에지 번호) : %s " % response.pageNum)
     print("pageCount (페이지 개수) : %s " % response.pageCount)
 
     print("========== 전송결과 정보 배열 ==========")
     for info in response.list:
-        print("state (전송 상태코드) : %s" % info.state)
+        print("state (상태코드) : %s" % info.state)
         print("sendDT (전송일시) : %s" % info.sendDT)
-        print("result (전송결과 코드) : %s" % info.result)
+        print("result (카카오 결과코드) : %s" % info.result)
         print("resultDT (전송결과 수신일시) : %s" % info.resultDT)
         print("contentType (카카오톡 유형) : %s" % info.contentType)
         print("receiveNum (수신번호) : %s" % info.receiveNum)
@@ -98,10 +98,11 @@ try:
         print("altContent (대체문자 내용) : %s" % info.altContent)
         print("altContentType (대체문자 전송타입) : %s" % info.altContentType)
         print("altSendDT (대체문자 전송일시) : %s" % info.altSendDT)
-        print("altResult (대체문자 전송결과 코드) : %s" % info.altResult)
+        print("altResult (대체문자 통신사 결과코드) : %s" % info.altResult)
         print("altResultDT (대체문자 전송결과 수신일시) : %s" % info.altResultDT)
         print("receiptNum (접수번호) : %s" % info.receiptNum)
         print("requestNum (요청번호) : %s" % info.requestNum + "\n")
+        print("interOPRefKey (파트너 지정키) : %s" % info.interOPRefKey + "\n")
 
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

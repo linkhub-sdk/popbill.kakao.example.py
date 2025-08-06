@@ -36,5 +36,6 @@ try:
     url = kakaoService.getPlusFriendMgtURL(CorpNum, UserID)
 
     print("URL: %s" % url)
+    
 except PopbillException as PE:
     print("Exception Occur : [%d] %s" % (PE.code, PE.message))

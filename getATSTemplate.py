@@ -34,10 +34,10 @@ try:
 
     templateInfo = kakaoService.getATSTemplate(CorpNum, templateCode)
 
-    print("templateCode (응답코드) : %s " % templateInfo.templateCode)
-    print("templateName (응답메시지) : %s " % templateInfo.templateName)
-    print("template (검색결과 건수) : %s " % templateInfo.template)
-    print("plusFriendID (카카오톡 채널 검색용 아이디) : %s " % templateInfo.plusFriendID)
+    print("templateCode (템플릿 코드) : %s " % templateInfo.templateCode)
+    print("templateName (템플릿 제목) : %s " % templateInfo.templateName)
+    print("template (템플릿 내용) : %s " % templateInfo.template)
+    print("plusFriendID (검색용 아이디) : %s " % templateInfo.plusFriendID)
     print("ads (광고 메시지) : %s " % templateInfo.ads)
     print("appendix (부가 메시지) : %s " % templateInfo.appendix)
     print("secureYN (보안템플릿 여부) : %s" % templateInfo.secureYN)

@@ -20,7 +20,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 카카오톡 전송시 과금되는 포인트 단가를 확인합니다.
-- https://developers.popbill.com/reference/kakaotalk/python/api/point#GetUnitCost
+- https://developers.popbill.com/reference/kakaotalk/python/common-api/point#GetUnitCost
 """
 
 try:

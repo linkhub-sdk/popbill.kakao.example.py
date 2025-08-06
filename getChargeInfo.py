@@ -20,7 +20,7 @@ kakaoService.UseLocalTimeYN = testValue.UseLocalTimeYN
 
 """
 팝빌 카카오톡 API 서비스 과금정보를 확인합니다.
-- https://developers.popbill.com/reference/kakaotalk/python/api/point#GetChargeInfo
+- https://developers.popbill.com/reference/kakaotalk/python/common-api/point#GetChargeInfo
 """
 
 try:
